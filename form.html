@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://kit.fontawesome.com/6133dcca2b.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: rgb(123, 195, 171);
+        }
+        .con{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            
+        }
+        .con{
+            display: flex;
+        }
+        .pic img{
+            height: 600px;
+            width: 500px;
+            
+        }
+        .field{
+            height: 500px;
+            width: 500px;
+            background-color: rgb(50, 49, 49);
+            padding: 5% 10%;
+            overflow: scroll;
+            
+        }
+        
+        input {
+            margin-left: 10px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: large;
+        }
+        #enter:hover{
+            background-color: aquamarine;
+            transform: scale(1.02);
+            box-shadow: 0 5px 10px white;
+            border: none;
+        
+        }
+        #enter{
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+            background-color: rgb(130, 82, 214);
+            transition: all 0.3s linear;
+            text-align: center;
+            
+
+        }
+
+        .heading{
+            text-align: center;
+            color: #edebeb;
+        }
+    .icon{
+        display: flex;
+        border-bottom: 1px solid white;
+        padding: 15px;
+        
+
+    }
+    .scroll{
+        margin-left: 120%;
+    }
+
+    .field::-webkit-scrollbar{
+    display: none;
+  }
+  
+    </style>
+    <script>
+        function validateForm(){
+            var name=document.myform.name.value;
+            var roll=document.myform.rollno.value;
+            var year=document.myform.year.value;
+            var section=document.myform.sec.value;
+            var address=document.myform.addr.value;
+            var pincode=document.myform.pin.value;
+            var mobile=document.myform.mobile.value;
+            var city=document.myform.city.value;
+            var section=document.myform.sec.value;
+            var dept=document.myform.dep.value;
+           
+           
+
+           
+
+            if(name==null || name==""){
+                document.getElementById("error").innerHTML="Name can't be blank";
+                return false;
+            }
+            else{
+                document.getElementById("error").innerHTML="";
+            }
+            if(address=="" || address== null){
+                document.getElementById("error3").innerHTML="Address can't be empty";
+            }
+            else{
+                document.getElementById("error3").innerHTML="";
+            }
+            if(pincode=="" || pincode== null){
+                document.getElementById("error4").innerHTML="Pincode can't be empty";
+            }
+            else{
+                document.getElementById("error4").innerHTML="";
+            }
+            if(mobile=="" || mobile== null){
+                document.getElementById("error5").innerHTML="Mobile No can't be empty";
+            }
+            else{
+                document.getElementById("error5").innerHTML="";
+            }
+            if(city=="" || city== null){
+                document.getElementById("error6").innerHTML="City can't be empty";
+            }
+            else{
+                document.getElementById("error6").innerHTML="";
+            }
+            if(section=="" || section== null){
+                document.getElementById("error7").innerHTML="Section can't be empty";
+            }
+            else{
+                document.getElementById("error7").innerHTML="";
+            }
+            if(dept=="" || dept== null){
+                document.getElementById("error8").innerHTML="Dept can't be empty";
+            }
+            else{
+                document.getElementById("error8").innerHTML="";
+            }
+            if(roll=="" || roll== null){
+                document.getElementById("error9").innerHTML="Roll No can't be empty";
+            }
+        else{
+            document.getElementById("error9").innerHTML="";
+            }
+        if(year=="" || year== null){
+            document.getElementById("error10").innerHTML="Roll No can't be empty";
+            }
+        else{
+            document.getElementById("error10").innerHTML="";
+        
+        }
+        }
+            
+        
+    </script>
+</head>
+<body>
+    <div class="con">
+        <div class="pic">
+            <img src="login.jpg" alt="">
+    
+        </div>
+        <div class="field">
+            <h1 class="heading">REGISTER</h1>
+            
+            <form name="myform" action="form.html" onsubmit="return validateForm()" >
+                <div class="icon">
+                    <i style="color: #edebeb;" class="fa-regular fa-user"></i>
+                    <input type="text" name="name" id="" placeholder="Username:" >
+                    
+                </div>
+                <p style="color: #edebeb;" id="error"></p>
+                <br>
+                <div class="icon">
+                    <i style="color: #edebeb;" class="fa-solid fa-id-card"></i>
+                    <input type="text" name="rollno" id="" placeholder="Roll No:" >
+                </div>
+                <p style="color: #edebeb;" id="error9"></p>
+                <br>
+                <div class="icon">
+                    <i style="color: #edebeb;" class="fa-solid fa-calendar-days"></i>
+                    <input type="text" name="year" id="" placeholder="Year:" >
+                </div>
+                <p style="color: #edebeb;" id="error10"></p>
+                <br>
+                <div class="icon">
+                    <i style="color: #edebeb;" class="fa-solid fa-school"></i>
+                    <input type="text" name="sec" id="" placeholder="Section:" >
+                </div>
+                <p style="color: #edebeb;" id="error7"></p>
+                <br>
+                <div class="icon">
+                    <i style="color: #edebeb;" class="fa-solid fa-school"></i>
+                    <input type="text" name="dept" id="" placeholder="Department:" >
+                </div>
+                <p style="color: #edebeb;" id="error8"></p>
+                <br>
+                <input type="radio" name="gender">
+                <label style="color: #edebeb;" for="">Male</label>
+                <input type="radio" name="gender">
+                <label style="color: #edebeb;" for="">Female</label>
+                <br>
+
+               <div class="icon">
+                <i style="color: #edebeb;" class="fa-solid fa-envelope"></i>
+                <input type="email" name="mail" id="" placeholder="Mail ID:" >
+               </div>
+               
+                <br>
+                <div class="icon">
+                    <i style="color: #edebeb;" class="fa-solid fa-phone"></i>
+                    <input type="number" name="mobile" id="" placeholder="Mobile No:" >
+                </div>
+                <p style="color: #edebeb;" id="error5"></p>
+                <br>
+               
+                <div class="icon">
+                    <i style="color: #edebeb;" class="fa-solid fa-location-dot"></i>
+                    <input type="text" name="addr" id="" placeholder="Address:" >
+                </div>
+                <p style="color: #edebeb;" id="error3"></p>
+                <br>
+                <div class="icon">
+                    <i style="color: #edebeb;" class="fa-solid fa-city"></i>
+                    <input type="text" name="city" id="" placeholder="City:" >
+                </div>
+                <p style="color: #edebeb;" id="error6"></p>
+                <br>
+                <div class="icon">
+                    <i style="color: #edebeb;" class="fa-solid fa-city"></i>
+                    <input type="text" name="pin" id="" placeholder="Pincode:" >
+                </div>
+                <p style="color: #edebeb;" id="error4"></p>
+                <br>
+                
+
+
+               <br>
+                <input type="submit" name="" id="enter">
+            
+            </form>
+           
+        </div>
+    </div>
+    
+</body>
+</html>
